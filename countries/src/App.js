@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CountryList from './component/countrylist/countrylist.js';
+import { CountryList } from './component/countrylist/countrylist.js';
 
 function App() {
   return (

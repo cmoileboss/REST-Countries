@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import { CountryList } from './component/countrylist/countrylist.js';
+import CountryList from './components/CountryList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <CountryList />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>🌍 REST Countries</h1>
+        <p>Découvrez tous les pays du monde</p>
       </header>
+      <main>
+        <CountryList />
+      </main>
     </div>
   );
 }

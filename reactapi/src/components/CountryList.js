@@ -31,6 +31,12 @@ export default function CountryList() {
     return <div>Erreur: {error.message}</div>;
   }
 
+  console.log(countries);
+
+  if (countries.length === 0) {
+    return <div>Aucun pays trouvé.</div>;
+  }
+
   return (
     <ul>
       {countries.map((country) => (

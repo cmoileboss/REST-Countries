@@ -19,7 +19,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
   const [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region,cca3')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Mauvaise réponse serveur');
@@ -48,6 +48,12 @@ export default function CountryList(selectedRegion, searchTerm, order) {
     return <div>Aucun pays trouvé.</div>;
   }
 
+  
+  let cca3Countries = new Map();
+  for (const country of countries) {
+    cca3Countries.set(country.cca3, country.name.common);
+  }
+
   let orderedCountries;
 
   if (order=="Alphabetical") {
@@ -64,7 +70,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
 
   if (selectedCountry) {
     console.log("Selected country :", selectedCountry);
-    return <CountryDetails country_name={selectedCountry} onBack={() => setSelectedCountry(null)} />
+    return <CountryDetails country_name={selectedCountry} onBack={() => setSelectedCountry(null)} cca3Countries={cca3Countries} />
   }
 
   const filteredCountries = orderedCountries.filter(country => {
@@ -78,9 +84,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
 
   return (
     <ul>
-      {filteredCountries.map((country) => {
-        return country;
-      }).map((country) => (
+      {filteredCountries.map((country) => (
         <li key={country.name.common} onClick={() => setSelectedCountry(country.name.common)}>{CountryCard(country)}</li>
       ))}
       

@@ -1,12 +1,7 @@
 import React, { use } from "react";
 import { useState, useEffect } from 'react';
-import CountryList from "./CountryList";
 
-function getList() {
-    return CountryList();
-}
-
-export default function CountryDetails({ country_name, onBack }){
+export default function CountryDetails({ country_name, onBack, cca3Countries }){
 
     console.log("country_name:", country_name);
     const [country, setCountry] = useState({});
@@ -51,8 +46,8 @@ export default function CountryDetails({ country_name, onBack }){
     const name = country.name.common;
     const capital = country.capital;
     const flags = country.flags.png;
-    const currencies = Object.entries(country.currencies);
-    const [ symbol, currency ] = currencies[0];
+    const currencies = country.currencies ? Object.entries(country.currencies) : 'None';
+    const [ symbol, currency ] = currencies ? currencies[0] : ['None', 'None'];
     const population = country.population;
     const region = country.region;
     const subregion = country.subregion;
@@ -60,8 +55,9 @@ export default function CountryDetails({ country_name, onBack }){
     const area = country.area;
     const cca3 = country.cca3;
     const timezones = country.timezones;
-    const langs = Object.keys(country.languages);
-    const languages = langs.map((key) => country.languages[key]);
+    const langs = country.languages ? Object.keys(country.languages) : null;
+    const languages = langs ? langs.map((key) => country.languages[key]) : 'None';
+    const borderingCountries = borders ? borders.map((border) => cca3Countries.get(border)) : null;
 
     
 
@@ -76,12 +72,11 @@ export default function CountryDetails({ country_name, onBack }){
                 Population count : {population}<br/>
                 Region : {region}<br/>
                 Subregion : {subregion}<br/>
-                Borders : {borders ? borders.join(', ') : 'None'}<br/>
+                Borders : {borders ? borderingCountries.join(', ') : 'None'}<br/>
                 Area : {area} km²<br/>
-                CCA3 : {cca3}<br/>
-                Timezones : {timezones.join(', ')}<br/>
+                Timezones : {timezones ? timezones.join(', ') : 'None'}<br/>
                 Currency : {currency.name} ({symbol})<br/>
-                Languages : {languages.join(', ')}<br/>
+                Languages : {languages ? languages.join(', ') : 'None'}<br/>
             </p>
             <img src={flags} className="flag"></img>
         </div>

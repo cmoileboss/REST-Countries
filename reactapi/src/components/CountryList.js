@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CountryCard from './CountryCard.js'
+import CountryDetails from './CountryDetails.js';
 
 function sort(a,b) {
     if (a<b) {
@@ -15,6 +16,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region')
@@ -64,6 +66,11 @@ export default function CountryList(selectedRegion, searchTerm, order) {
 
   console.log(orderedCountries)
 
+  if (selectedCountry) {
+    console.log("Selected country :", selectedCountry);
+    return <CountryDetails country_name={selectedCountry} />
+  }
+
   return (
     <ul>
       {orderedCountries.filter(country => {
@@ -74,7 +81,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
         else if (country.region == selectedRegion)
           return country;
       }).map((country) => (
-        <li key={country.name.common}>{CountryCard(country)}</li>
+        <li key={country.name.common} onClick={() => setSelectedCountry(country.name.common)}>{CountryCard(country)}</li>
       ))}
     </ul>
   );

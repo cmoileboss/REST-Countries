@@ -1,29 +1,44 @@
+import React from "react";
+import { useState, useEffect } from 'react';
+
 export default function CountryDetails(country_name){
 
-    const [country, setCountry] = useState([]);
+    console.log("country_name:", country_name.country_name);
+    const [country, setCountry] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     
     useEffect(() => {
-    const web_name = country_name.replace(' ', '%20');
-    fetch(`https://restcountries.com/v3.1/name/${web_name}?fullText=true`)
-        .then((response) => {
-        if (!response.ok) {
-            throw new Error('Mauvaise réponse serveur');
-        }
-        return response.json();
-        })
-        .then((data) => {
-        setCountry(data);
-        setLoading(false);
-        })
-        .catch((error) => {
-        setError(error);
-        setLoading(false);
-        });
-    }, []);
+        const web_name = country_name.country_name.replace(' ', '%20');
+        const url = `https://restcountries.com/v3.1/name/${web_name}?fullText=true`;
+        console.log("Fetching URL:", url);
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Mauvaise réponse serveur');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setCountry(data[0]);
+                setLoading(false);
+                console.log("country data:", country);
+            })
+            .catch((error) => {
+                setError(error);
+                setLoading(false);
+            });
+        }, []);
+        console.log(country);
 
+    if (loading) {
+        return <div>Chargement...</div>;
+    }
+
+    if (error) {
+        return <div>Erreur: {error.message}</div>;
+    }
 // name,capital,flags,population,region,subregion,borders,area,cca3,timezones
 
     const name = country.name.common;

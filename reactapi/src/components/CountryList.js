@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import CountryCard from './CountryCard.js'
 
-export default function CountryList() {
+export default function CountryList(selectedRegion) {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Mauvaise réponse serveur');
@@ -40,7 +40,12 @@ export default function CountryList() {
 
   return (
     <ul>
-      {countries.map((country) => (
+      {countries.filter(country => {
+        if (selectedRegion == 'All')
+          return country;
+        else if (country.region == selectedRegion)
+          return country;
+      }).map((country) => (
         <li key={country.name.common}>{CountryCard(country)}</li>
       ))}
     </ul>

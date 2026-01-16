@@ -18,16 +18,17 @@ function App() {
           Learn React
         </a>
       </header>
+      
       <section className="country-list-section">
-        <CountryList/>
+        <CustomDropdown 
+          options={['All', 'Europe', 'Americas', 'Asia', 'Oceania', 'Antarctic', 'Africa']} 
+          label="Select an option"/>
       </section>
     </div>
   );
 }
 
-/*         <CustomDropdown 
-          options={['Name', 'Capital', 'Currencies']} 
-          label="Select an option" 
+/*         
         />
 */
 

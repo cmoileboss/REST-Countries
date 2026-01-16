@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CountryCard from './CountryCard.js'
 
 export default function CountryList() {
   const [countries, setCountries] = useState([]);
@@ -6,7 +7,7 @@ export default function CountryList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,flags,population')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Mauvaise réponse serveur');
@@ -40,7 +41,7 @@ export default function CountryList() {
   return (
     <ul>
       {countries.map((country) => (
-        <li key={country}>{country.name.common}</li>
+        <li key={country.name.common}>{CountryCard(country)}</li>
       ))}
     </ul>
   );

@@ -18,16 +18,17 @@ function App() {
           Learn React
         </a>
       </header>
-      <body className="App-body">
-        <section className="country-list-section">
-        <CustomDropdown 
-          options={['Name', 'Capital', 'Currencies']} 
-          label="Select an option" 
-        />
-        </section>
-      </body>
+      <section className="country-list-section">
+        <CountryList/>
+      </section>
     </div>
   );
 }
+
+/*         <CustomDropdown 
+          options={['Name', 'Capital', 'Currencies']} 
+          label="Select an option" 
+        />
+*/
 
 export default App;

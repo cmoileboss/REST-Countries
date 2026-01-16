@@ -37,21 +37,23 @@
   }
 }
 
-.App-body {
+.country-list-section {
   background-color: #282c34;
   color: white;
   font-size: medium;
-}
-
-.country-list-section {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   margin: auto auto;
-  width: 150px;
+  width: 100vw;
+  color: white;
 }
 
 .country-list-section li:hover{
   background-color: #444c56;
+}
+
+.flag {
+  width: 50px;
 }

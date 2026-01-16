@@ -8,7 +8,7 @@ export default function CustomDropdown({ options, label, orders}) {
     const [selected, setSelected] = useState(label);
     const [searchTerm, setSearchTerm] = useState('');
     const [isOpenOrder, setIsOpenOrder] = useState(false);
-    const [order, setOrder] = useState('Default');
+    const [order, setOrder] = useState('Alphabetical');
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -17,7 +17,7 @@ export default function CustomDropdown({ options, label, orders}) {
         setIsOpen(false);
     };
 
-    let countries = CountryList(selected,searchTerm);
+    let countries = CountryList(selected,searchTerm,order);
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value);

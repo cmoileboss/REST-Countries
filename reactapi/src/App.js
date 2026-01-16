@@ -23,7 +23,7 @@ function App() {
          <CustomDropdown 
           options={['All', 'Europe', 'Americas', 'Asia', 'Oceania', 'Antarctic', 'Africa']} 
           label="Select an option"
-          orders={['Default', 'Alphabetical', 'Population']}/>
+          orders={['Alphabetical', 'Population']}/>
       </section>
     </div>
   );

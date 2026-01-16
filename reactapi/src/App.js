@@ -22,7 +22,8 @@ function App() {
       <section className="country-list-section">
          <CustomDropdown 
           options={['All', 'Europe', 'Americas', 'Asia', 'Oceania', 'Antarctic', 'Africa']} 
-          label="Select an option"/>
+          label="Select an option"
+          orders={['Default', 'Alphabetical', 'Population']}/>
       </section>
     </div>
   );

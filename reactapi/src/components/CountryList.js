@@ -44,10 +44,6 @@ export default function CountryList(selectedRegion, searchTerm, order) {
     return <div>Erreur: {error.message}</div>;
   }
 
-  console.log(countries);
-
-  console.log('abcd'<'dcba');
-
   if (countries.length === 0) {
     return <div>Aucun pays trouvé.</div>;
   }
@@ -68,21 +64,26 @@ export default function CountryList(selectedRegion, searchTerm, order) {
 
   if (selectedCountry) {
     console.log("Selected country :", selectedCountry);
-    return <CountryDetails country_name={selectedCountry} />
+    return <CountryDetails country_name={selectedCountry} onBack={() => setSelectedCountry(null)} />
   }
 
-  return (
-    <ul>
-      {orderedCountries.filter(country => {
+  const filteredCountries = orderedCountries.filter(country => {
         if (!country.name.common.toLowerCase().includes(searchTerm.toLowerCase()))
           return;
         if (selectedRegion == 'All')
           return country;
         else if (country.region == selectedRegion)
           return country;
+      });
+
+  return (
+    <ul>
+      {filteredCountries.map((country) => {
+        return country;
       }).map((country) => (
         <li key={country.name.common} onClick={() => setSelectedCountry(country.name.common)}>{CountryCard(country)}</li>
       ))}
+      
     </ul>
   );
 }

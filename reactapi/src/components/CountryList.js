@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CountryCard from './CountryCard.js'
 
-export default function CountryList(selectedRegion) {
+export default function CountryList(selectedRegion, searchTerm) {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -41,6 +41,8 @@ export default function CountryList(selectedRegion) {
   return (
     <ul>
       {countries.filter(country => {
+        if (!country.name.common.toLowerCase().includes(searchTerm.toLowerCase()))
+          return;
         if (selectedRegion == 'All')
           return country;
         else if (country.region == selectedRegion)

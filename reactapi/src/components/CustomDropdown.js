@@ -6,6 +6,7 @@ import CountryList from './CountryList.js'
 export default function CustomDropdown({ options, label}) {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState(label);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -14,7 +15,11 @@ export default function CustomDropdown({ options, label}) {
         setIsOpen(false);
     };
 
-    const countries = CountryList(selected);
+    let countries = CountryList(selected,searchTerm);
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+    }
 
     return (
         <div>
@@ -22,6 +27,11 @@ export default function CustomDropdown({ options, label}) {
                 <button className="dropdown-toggle" onClick={toggleMenu}>
                     {selected} <FaChevronDown />
                 </button>
+                <input type="text"
+                placeholder='Tapez votre recherche'
+                value={searchTerm}
+                onChange={handleChange}
+                />
                 {isOpen && (
                     <ul className="dropdown-menu">
                         {options.map((option) => (

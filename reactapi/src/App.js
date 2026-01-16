@@ -18,9 +18,9 @@ function App() {
           Learn React
         </a>
       </header>
-      
+
       <section className="country-list-section">
-        <CustomDropdown 
+         <CustomDropdown 
           options={['All', 'Europe', 'Americas', 'Asia', 'Oceania', 'Antarctic', 'Africa']} 
           label="Select an option"/>
       </section>

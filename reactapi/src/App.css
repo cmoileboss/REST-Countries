@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-body {
+  background-color: #282c34;
+  color: white;
+  font-size: medium;
+}
+
+.country-list-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: auto auto;
+  width: 150px;
+}
+
+.country-list-section li:hover{
+  background-color: #444c56;
 }

@@ -6,7 +6,7 @@ export default function CountryList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all?fields=name')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Mauvaise réponse serveur');

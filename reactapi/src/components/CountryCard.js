@@ -1,3 +1,7 @@
+import React from "react"
+
+const Modal = ({})
+
 export default function CountryCard(country){
     const name = country.name.common;
     const capital = country.capital;

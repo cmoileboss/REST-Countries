@@ -1,7 +1,11 @@
 # Explications des prompts utilisés et des réponses clés de ChatGPT
 
 ## Prompt de mise en contexte :
-    Je suis un élève en développement intelligence artificielle pour une école. Je souhaite réaliser un projet qui m'a été demandé, en plusieurs étapes précises, et je souhaiterais m'appuyer sur toi pour me guider en tant qu'assistant pédagogique mais il est très important que tu ne me donnes pas les réponses directement et que l'on avance étape par étape. Ainsi, si je t'explique ce que je souhaite faire ou un problème, tu peux m'aider mais tu attendras que je te dise qu'on peut continuer à avancer avant de me donner des réponses supplémentaires.
+    Je suis un élève en développement intelligence artificielle pour une école. Je souhaite réaliser un projet qui
+    m'a été demandé, en plusieurs étapes précises, et je souhaiterais m'appuyer sur toi pour me guider en tant
+    qu'assistant pédagogique mais il est très important que tu ne me donnes pas les réponses directement et que l'on
+    avance étape par étape. Ainsi, si je t'explique ce que je souhaite faire ou un problème, tu peux m'aider mais tu
+    attendras que je te dise qu'on peut continuer à avancer avant de me donner des réponses supplémentaires.
 
 ## Réponse :
 
@@ -24,13 +28,18 @@
         Pas de code final, d’architecture complète ou de réponse directe tant que tu ne l’as pas construite toi-même.
         Pas d’étape suivante sans ton feu vert explicite.
 
-    Lors de nos échanges, le LLM a bien respecté la règle de travailler étape par étape, proposant à chaque étape des questions pour mieux comprendre le code à réaliser et pour orienter nos recherches. Il ne proposait pas de code, demandait à ne pas recevoir de code pour ne pas lui demander de corriger automatiquement nos erreurs, et attendait un message précis pour passer à l'étape suivante.
+    Lors de nos échanges, le LLM a bien respecté la règle de travailler étape par étape, proposant à chaque étape des
+    questions pour mieux comprendre le code à réaliser et pour orienter nos recherches. Il ne proposait pas de code,
+    demandait à ne pas recevoir de code pour ne pas lui demander de corriger automatiquement nos erreurs, et attendait
+    un message précis pour passer à l'étape suivante.
 
-    À chaque étape, ChatGPT proposait des questions pour vérifier la bonne compréhension, et validait ou corrigeait celles-ci après nos réponses.
+    À chaque étape, ChatGPT proposait des questions pour vérifier la bonne compréhension, et validait ou corrigeait
+    celles-ci après nos réponses.
 
 ## Exemple de prompt pour avancer dans le projet :
 
-    Je dois maintenant rendre l'UI réactive en permettant une recherche selon un mot clé ou un filtrage des données via une entrée sur la page.
+    Je dois maintenant rendre l'UI réactive en permettant une recherche selon un mot clé ou un filtrage des données
+    via une entrée sur la page.
 
 ## Réponse de ChatGPT :
 
@@ -104,11 +113,14 @@
 
     🛑 Je m’arrête ici.
 
-    👉 Réponds avec ton raisonnement ou dis « On peut continuer » quand tu es prêt à passer à l’implémentation logique.
+    👉 Réponds avec ton raisonnement ou dis « On peut continuer » quand tu es prêt à passer à l’implémentation
+    logique.
 
 ## Question sur la mise en place d'un filtre :
 
-    On a maintenant une liste qui s'affiche avec les différents pays. Lorsqu'on clique sur un élément de la liste, on souhaite avoir un affichage des détails du pays sélectionné. Dans cet objectif, quel serait la méthode à utiliser pour l'affichage des détails ?
+    On a maintenant une liste qui s'affiche avec les différents pays. Lorsqu'on clique sur un élément de la liste,
+    on souhaite avoir un affichage des détails du pays sélectionné. Dans cet objectif, quel serait la méthode à
+    utiliser pour l'affichage des détails ?
 
 ## Réponse ChatGPT :
 

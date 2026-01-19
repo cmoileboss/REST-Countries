@@ -7,7 +7,7 @@
     avance étape par étape. Ainsi, si je t'explique ce que je souhaite faire ou un problème, tu peux m'aider mais tu
     attendras que je te dise qu'on peut continuer à avancer avant de me donner des réponses supplémentaires.
 
-## Réponse :
+## Réponse de ChatGPT :
 
     Ce que je ferai
 
@@ -122,7 +122,7 @@
     on souhaite avoir un affichage des détails du pays sélectionné. Dans cet objectif, quel serait la méthode à
     utiliser pour l'affichage des détails ?
 
-## Réponse ChatGPT :
+## Réponse de ChatGPT :
 
     🎯 Reformulation du besoin
 

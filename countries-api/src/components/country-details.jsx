@@ -34,25 +34,18 @@ export function CountryDetails({ country_name, onBack, countries }) {
     const name = selectedCountry.name.common;
     const capital = selectedCountry.capital;
     const flags = selectedCountry.flags.png;
-    const currencies = Object.entries(selectedCountry.currencies);
-    const [ symbol, currency ] = currencies[0];
+    const currencies = selectedCountry.currencies ? Object.entries(selectedCountry.currencies) : null;
+    const [ symbol, currency ] = currencies ? currencies[0] : [null, null];
     const population = selectedCountry.population;
     const region = selectedCountry.region;
-    const subregion = selectedCountry.subregion;
+    const subregion = selectedCountry.subregion ? selectedCountry.subregion : 'Aucune';
     const borders = selectedCountry.borders;
-    const bordering_countries = borders ? borders.map((border) => {
-        console.log(border);
-        for (const country in countries){
-            console.log(country.cca3);
-            if (country.cca3 === border)
-                return country.name.common;
-        }
-    }) : 'Aucun';
+    const bordering_countries = borders ? borders.map((border) => countries.get(border)) : null;
     const area = selectedCountry.area;
     const cca3 = selectedCountry.cca3;
     const timezones = selectedCountry.timezones;
-    const langs = Object.keys(selectedCountry.languages);
-    const languages = langs.map((key) => selectedCountry.languages[key]);
+    const langs = selectedCountry.languages ? Object.keys(selectedCountry.languages) : null;
+    const languages = langs ? langs.map((key) => selectedCountry.languages[key]) : null;
 
 
     return(
@@ -64,16 +57,16 @@ export function CountryDetails({ country_name, onBack, countries }) {
                 
                 <h1>{name}</h1>
                 <p>
-                    Capitale : {capital}<br/>
+                    Capitale : {capital ? capital : 'Aucune'}<br/>
                     Population : {population}<br/>
                     Région : {region}<br/>
-                    Sousrégion : {subregion}<br/>
+                    Sous-région : {subregion}<br/>
                     Pays frontaliers : {borders ? bordering_countries.join(', ') : 'Aucun'}<br/>
                     Superficie : {area} km²<br/>
                     CCA3 : {cca3}<br/>
                     Timezones : {timezones.join(', ')}<br/>
-                    Monnaie : {currency.name} ({symbol})<br/>
-                    Langues : {languages.join(', ')}<br/>
+                    Monnaie : {currency ? currency.name : 'Aucune'} { symbol ? symbol : ''}<br/>
+                    Langues : {languages ? languages.join(', ') : 'Aucune'}<br/>
                 </p>
                 <img src={flags} className="flag"></img>
             </div>

@@ -28,6 +28,11 @@ export function CountriesList() {
             .finally(() => setLoading(false));
     }, []);
 
+    let cca3Countries = new Map();
+    for (const country of countries) {
+        cca3Countries.set(country.cca3, country.name.common);
+    }
+
     // Fonction permettant d'afficher seulement les pays contenant la valeur du champ texte
     function handleSearchChange(e) {
         const term = e.target.value;
@@ -103,7 +108,7 @@ export function CountriesList() {
     // Événement lorsqu'on appuie sur la carte d'un pays
     if (selectedCountry) {
         console.log(selectedCountry);
-        return <CountryDetails country_name={selectedCountry} onBack={() => setSelectedCountry(null)} countries={countries}/>
+        return <CountryDetails country_name={selectedCountry} onBack={() => setSelectedCountry(null)} countries={cca3Countries}/>
     }
 
     // Liste des ordres possibles

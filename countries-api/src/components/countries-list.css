@@ -53,6 +53,15 @@
     font-style: italic;
 }
 
+.react-dropdown-select-item {
+    background-color: #242424;
+}
+
+.react-dropdown-select-dropdown:hover {
+    background-color: #434343;
+}
+
+
 .order-select {
     width: 100%;
     max-width: max-content;
@@ -74,4 +83,15 @@
 .order-select::placeholder {
     color: #999;
     font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+    .react-dropdown-select-item {
+        background-color: #ffffff;
+    }
+
+    .react-dropdown-select-dropdown:hover {
+        background-color: #efefef;
+
+    }
 }

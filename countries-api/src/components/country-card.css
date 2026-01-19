@@ -1,5 +1,5 @@
 .country-card {
-    background: white;
+    background-color: #2e2e2e;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -28,15 +28,33 @@
 .country-info h3 {
     margin: 0 0 15px 0;
     font-size: 18px;
-    color: #2c3e50;
+    color: white;
 }
 
 .country-info p {
     margin: 8px 0;
-    color: #555;
+    color: rgb(242, 242, 242);
     font-size: 14px;
 }
 
 .country-info strong {
+    color: white;
+}
+
+@media (prefers-color-scheme: light) {
+    .country-card {
+        background-color: white;
+    }
+
+    .country-info p {
+        color: #555;
+    }
+
+    .country-info strong {
     color: #333;
+    }
+
+    .country-info h3 {
+    color: #2c3e50;
+    }   
 }

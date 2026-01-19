@@ -1,7 +1,3 @@
-import React from "react"
-
-const Modal = ({})
-
 export default function CountryCard(country){
     const name = country.name.common;
     const capital = country.capital;
@@ -11,7 +7,7 @@ export default function CountryCard(country){
 
     return(
         <div className="countryCard">
-            <h1>{name}</h1>
+            <h2>{name}</h2>
 
             <p>
                 Capital : {capital}<br/>

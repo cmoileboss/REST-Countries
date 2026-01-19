@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import CountryList from './components/CountryList';
 import CustomDropdown from './components/CustomDropdown';
 
 

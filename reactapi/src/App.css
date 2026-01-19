@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  height: 100vh;
 }
 
 .App-logo {
@@ -14,7 +16,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -37,6 +38,11 @@
   }
 }
 
+.country-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .country-list-section {
   background-color: #282c34;
   color: white;
@@ -44,10 +50,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  margin: auto auto;
-  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: white;
+}
+
+.country-list-section li{
+  background-color: #343944;
+  border-width: 3px;
+  border-radius: 5px;
+  margin: 5px 5px;
+  list-style-type: none;
 }
 
 .country-list-section li:hover{
@@ -56,4 +69,8 @@
 
 .flag {
   width: 50px;
+}
+
+.detailed-flag {
+  width: 200px;
 }

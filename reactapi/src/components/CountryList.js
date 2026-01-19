@@ -83,7 +83,7 @@ export default function CountryList(selectedRegion, searchTerm, order) {
       });
 
   return (
-    <ul>
+    <ul class={"country-list"}>
       {filteredCountries.map((country) => (
         <li key={country.name.common} onClick={() => setSelectedCountry(country.name.common)}>{CountryCard(country)}</li>
       ))}

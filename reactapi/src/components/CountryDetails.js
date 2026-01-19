@@ -1,4 +1,3 @@
-import React, { use } from "react";
 import { useState, useEffect } from 'react';
 
 export default function CountryDetails({ country_name, onBack, cca3Countries }){
@@ -63,7 +62,7 @@ export default function CountryDetails({ country_name, onBack, cca3Countries }){
 
     return(
         <div className="countryDetails">
-            <button onClick={onBack} style={{ marginBottom: '20px', padding: '10px 20px', cursor: 'pointer' }}>
+            <button onClick={onBack} style={{marginTop:'20px', padding: '10px 20px', cursor: 'pointer' }}>
                 ← Retour à la liste
             </button>
             <h1>{name}</h1>
@@ -78,7 +77,7 @@ export default function CountryDetails({ country_name, onBack, cca3Countries }){
                 Currency : {currency.name} ({symbol})<br/>
                 Languages : {languages ? languages.join(', ') : 'None'}<br/>
             </p>
-            <img src={flags} className="flag"></img>
+            <img src={flags} className="detailed-flag"></img>
         </div>
     );
 }

@@ -11,7 +11,7 @@ Se rendre dans le dossier countries-api puis lancer les commandes suivantes :
 
 L'application intialisée présente 3 dossiers :
     node_modules qui contient les modules de base de React.js
-    public ?
+    public sert à stocker des fichiers statiques et des ressources diverses mais nous n'en avons pas eu besoin
     src qui représente le coeur du programme avec les pages, les composants et les scripts associés
 
 App.js : Script générant la page HTML par défaut de l'application

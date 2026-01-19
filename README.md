@@ -10,13 +10,13 @@ Se rendre dans le dossier countries-api puis lancer les commandes suivantes :
 ## Explication des rôles des différents éléments de l'application
 
 L'application intialisée présente 3 dossiers :
-    node_modules qui contient les modules de base de React.js
-    public sert à stocker des fichiers statiques et des ressources diverses mais nous n'en avons pas eu besoin
+    node_modules qui contient les modules de base de React.js  
+    public sert à stocker des fichiers statiques et des ressources diverses mais nous n'en avons pas eu besoin  
     src qui représente le coeur du programme avec les pages, les composants et les scripts associés
 
-App.js : Script générant la page HTML par défaut de l'application
-App.css : Style de App.js
-App.test.js : Script de tests sur App.js
+App.js : Script générant la page HTML par défaut de l'application  
+App.css : Style de App.js  
+App.test.js : Script de tests sur App.js  
 
 Nous avons créé deux dossiers controllers et components.
 

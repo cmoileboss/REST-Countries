@@ -1,0 +1,22 @@
+.countryDetails {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border-style: solid;
+}
+
+.countryDetails:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-style: groove;
+}

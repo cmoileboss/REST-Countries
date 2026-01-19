@@ -1,9 +1,9 @@
-#Explications des prompts utilisés et des réponses clés de ChatGPT
+# Explications des prompts utilisés et des réponses clés de ChatGPT
 
-##Prompt de mise en contexte :
+## Prompt de mise en contexte :
 Je suis un élève en développement intelligence artificielle pour une école. Je souhaite réaliser un projet qui m'a été demandé, en plusieurs étapes précises, et je souhaiterais m'appuyer sur toi pour me guider en tant qu'assistant pédagogique mais il est très important que tu ne me donnes pas les réponses directement et que l'on avance étape par étape. Ainsi, si je t'explique ce que je souhaite faire ou un problème, tu peux m'aider mais tu attendras que je te dise qu'on peut continuer à avancer avant de me donner des réponses supplémentaires.
 
-##Réponse :
+## Réponse :
 
 Ce que je ferai
 
@@ -28,11 +28,11 @@ Lors de nos échanges, le LLM a bien respecté la règle de travailler étape pa
 
 À chaque étape, ChatGPT proposait des questions pour vérifier la bonne compréhension, et validait ou corrigeait celles-ci après nos réponses.
 
-##Exemple de prompt pour avancer dans le projet :
+## Exemple de prompt pour avancer dans le projet :
 
 Je dois maintenant rendre l'UI réactive en permettant une recherche selon un mot clé ou un filtrage des données via une entrée sur la page.
 
-##Réponse de ChatGPT :
+## Réponse de ChatGPT :
 
 🎯 Objectif de cette étape
 
@@ -106,11 +106,11 @@ ce que l’utilisateur voit quand :
 
 👉 Réponds avec ton raisonnement ou dis « On peut continuer » quand tu es prêt à passer à l’implémentation logique.
 
-##Question sur la mise en place d'un filtre :
+## Question sur la mise en place d'un filtre :
 
 On a maintenant une liste qui s'affiche avec les différents pays. Lorsqu'on clique sur un élément de la liste, on souhaite avoir un affichage des détails du pays sélectionné. Dans cet objectif, quel serait la méthode à utiliser pour l'affichage des détails ?
 
-Réponse ChatGPT :
+## Réponse ChatGPT :
 
 🎯 Reformulation du besoin
 

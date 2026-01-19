@@ -116,7 +116,7 @@
     👉 Réponds avec ton raisonnement ou dis « On peut continuer » quand tu es prêt à passer à l’implémentation
     logique.
 
-## Question sur la mise en place d'un filtre :
+## Question sur l'affichage d'un pays en détails :
 
     On a maintenant une liste qui s'affiche avec les différents pays. Lorsqu'on clique sur un élément de la liste,
     on souhaite avoir un affichage des détails du pays sélectionné. Dans cet objectif, quel serait la méthode à

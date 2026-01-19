@@ -5,6 +5,7 @@
     overflow: hidden;
     position: relative;
     border-style: solid;
+    width: 30vw;
 }
 
 .flag {

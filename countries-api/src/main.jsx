@@ -5,7 +5,6 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <title>Les pays du monde</title>
     <App />
   </StrictMode>,
 )

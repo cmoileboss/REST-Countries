@@ -13,7 +13,7 @@ export function CountryCard(country) {
                 <p><strong>Superficie : </strong> {country.area ? country.area.toLocaleString() + ' km²' : 'N/A'}</p>
                 <p><strong>Région : </strong> {country.region}</p>
                 <p><strong>Capitale : </strong> {country.capital ? country.capital[0] : 'N/A'}</p>
-                <p><strong>Densité : </strong>{(country.population/country.area).toLocaleString() + ' hab./km²'}</p>
+                <p><strong>Densité : </strong>{country.area !== 0 ? (country.population/country.area).toLocaleString() + ' hab./km²' : 'N/A'}</p>
             </div>
         </div>
     );

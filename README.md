@@ -1,15 +1,21 @@
 # Construire une application front-end moderne à partir de données issues d’une API publique
-Par *Guillaume PEDRONA* et *Pierre Jannot*.
+Par *Guillaume PEDRONA* et *Pierre JANNOT*.
 
 ## COMMENT LANCER LE SITE ?
 
-Se rendre dans le dossier countries-api puis lancer les commandes suivantes :   
-```npm install vite```    
+Se rendre dans le dossier countries-api puis exécuter les commandes suivantes :   
+```npm install```    
 ```npm run dev```
+
+## API utilisée
+
+Pour ce projet nous avons décidé d'utiliser l'API publique disponible sur restcountries.com, listant l'ensemble des pays du monde avec de nombreuses informations telles que la population, la superficie, la langue, la monnaie etc.
+
+L'ensemble des informations de cette API est disponible via la requête https://restcountries.com/v3.1/all
 
 ## Explication des rôles des différents éléments de l'application
 
-L'application intialisée présente 3 dossiers :   
+L'application initialisée présente 3 dossiers :   
 - node_modules qui contient les modules de base de React.js  
 - public qui sert à stocker des fichiers statiques et des ressources diverses mais nous n'en avons pas eu besoin  
 - src qui représente le coeur du programme avec les pages, les composants et les scripts associés

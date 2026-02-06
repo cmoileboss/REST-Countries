@@ -11,7 +11,7 @@ Se rendre dans le dossier countries-api puis exécuter les commandes suivantes :
 
 Pour ce projet nous avons décidé d'utiliser l'API publique disponible sur restcountries.com, listant l'ensemble des pays du monde avec de nombreuses informations telles que la population, la superficie, la langue, la monnaie etc.
 
-L'ensemble des informations de cette API est disponible via la requête https://restcountries.com/v3.1/all
+L'ensemble des informations de cette API est disponible via la requête https://restcountries.com/v3.1/all.
 
 ## Explication des rôles des différents éléments de l'application
 

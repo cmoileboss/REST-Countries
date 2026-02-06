@@ -2,9 +2,14 @@ import './country-card.css';
 
 
 
-export function CountryCard(country) {
+export function CountryCard({ country, onClick }) {
     return (
-        <div className="country-card">
+        <li 
+            key={country.cca3} 
+            id={country.cca3}  
+            className="country-card"
+            onClick={() => onClick(country)}
+        >
             <img className="country-flag" src={country.flags.png} alt={country.name.common} />
             
             <div className="country-info">
@@ -15,6 +20,6 @@ export function CountryCard(country) {
                 <p><strong>Capitale : </strong> {country.capital ? country.capital[0] : 'N/A'}</p>
                 <p><strong>Densité : </strong>{(country.population/country.area).toLocaleString() + ' hab./km²'}</p>
             </div>
-        </div>
+        </li>
     );
 }

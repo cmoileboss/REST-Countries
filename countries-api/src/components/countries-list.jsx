@@ -105,6 +105,11 @@ export function CountriesList() {
     if (error)
         return (<div id="error">Erreur lors du chargement des pays.</div>)
 
+    // Fonction appelée lors du clic sur une carte de pays
+    const handleCountryClick = (country) => {
+        setSelectedCountry(country.name.common);
+    };
+
     // Événement lorsqu'on appuie sur la carte d'un pays
     if (selectedCountry) {
         console.log(selectedCountry);
@@ -193,7 +198,7 @@ export function CountriesList() {
             <ul className="countries-list">
                 {
                     filteredCountries.map((country) => {
-                        return <li key={country.cca3} id={country.cca3} onClick={() => setSelectedCountry(country.name.common)}>{CountryCard(country)}</li>
+                        return <CountryCard country={country} onClick={handleCountryClick} />;
                     })
                 }
             </ul>
